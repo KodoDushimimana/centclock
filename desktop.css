@@ -1,40 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Clocks</title>
-    <link rel="stylesheet" href="desktop.css">
-</head>
-<body>
-    <div class="background-text">YASNY</div>
-    <div class="clock-container">
-        <div class="clock" id="newYork">
-            <div class="city">New York</div>
-            <div class="time"></div>
-            <div class="date"></div>
-            <div class="status"></div>
-        </div>
-        <div class="clock" id="kigali">
-            <div class="city">Kigali</div>
-            <div class="time"></div>
-            <div class="date"></div>
-            <div class="status"></div>
-        </div>
-        <div class="clock" id="nairobi">
-            <div class="city">Nairobi</div>
-            <div class="time"></div>
-            <div class="date"></div>
-            <div class="status"></div>
-        </div>
-        <div class="clock" id="kampala">
-            <div class="city">Kampala</div>
-            <div class="time"></div>
-            <div class="date"></div>
-            <div class="status"></div>
-        </div>
-    </div>
-    <div id="message"></div>
-    <script src="desktop.js"></script>
-</body>
-</html>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.background-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 10rem;
+    color: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 50px,
+        rgba(255, 255, 255, 0.1) 50px,
+        rgba(255, 255, 255, 0.1) 100px
+    );
+}
+
+.clock-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clock {
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 200px; /* Adjust based on your design */
+}
+
+.city {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.date {
+    font-size: 1rem;
+    color: #888;
+}
+
+.status {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.status.sleeping {
+    color: red;
+}
+
+.status.at-work {
+    color: green;
+}
+
+.status.closed {
+    color: #a1c4fd; /* Light blue color for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clock-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clock {
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    #newYork, #kigali {
+        margin-right: 0;
+    }
+
+    #nairobi, #kampala {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    #newYork, #kigali {
+        margin-right: 10px;
+    }
+
+    #nairobi, #kampala {
+        margin-left: 10px;
+    }
+}
