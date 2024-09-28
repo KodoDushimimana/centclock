@@ -45,21 +45,30 @@ nav a:hover {
 }
 
 /* Content styles */
-h2 {
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Full width for the content */
+    max-width: 600px; /* Limit width */
     margin-top: 70px; /* Space below the fixed nav */
+}
+
+h2 {
     text-align: center; /* Center align heading */
+    margin-bottom: 10px; /* Add space below the heading */
 }
 
 p {
     text-align: center; /* Center align paragraph */
-    max-width: 600px; /* Limit width */
+    margin-bottom: 20px; /* Add space below the paragraph */
 }
 
 /* Textarea and Input styles */
 textarea,
 input[type='text'] {
-    width: 100%;
-    max-width: 600px;
+    width: 100%; /* Full width for inputs */
+    max-width: 100%; /* Allow inputs to take full width */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
