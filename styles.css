@@ -1,29 +1,71 @@
+/* Body styles */
 body {
-				font-family: Arial, sans-serif;
-				margin: 40px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-			}
-			textarea,
-			input[type='text'] {
-				width: 100%;
-				max-width: 600px;
-				padding: 10px;
-				margin: 10px 0;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-			}
-			button {
-				padding: 10px 20px;
-				background-color: #4caf50;
-				color: white;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-				margin: 5px;
-			}
-			button:hover {
-				background-color: #45a049;
-			}
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* To position the menu bar */
+}
+
+/* Menu Bar styles */
+nav {
+    background-color: #4a90e2; /* Blue background */
+    padding: 15px; /* Add padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Full width */
+    position: absolute; /* Position at the top */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the menu */
+}
+
+nav li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Textarea and Input styles */
+textarea,
+input[type='text'] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    margin: 5px; /* Space around buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
