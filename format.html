@@ -15,29 +15,31 @@
         </ul>
     </nav>
 
-    <h2>Format Tags</h2>
-    <p>Use this tool to format your tags for better visibility and effectiveness on platforms like YouTube.</p>
+    <div class="content"> <!-- Centering container -->
+        <h2>Format Tags</h2>
+        <p>Use this tool to format your tags for better visibility and effectiveness on platforms like YouTube.</p>
 
-    <!-- Textarea for formatting input -->
-    <textarea
-        id="tagInput"
-        rows="10"
-        placeholder="Enter your tags here, separated by commas."
-    ></textarea>
+        <!-- Textarea for formatting input -->
+        <textarea
+            id="tagInput"
+            rows="10"
+            placeholder="Enter your tags here, separated by commas."
+        ></textarea>
 
-    <!-- Button to format tags -->
-    <button onclick="formatTags()">Format Tags</button>
+        <!-- Button to format tags -->
+        <button onclick="formatTags()">Format Tags</button>
 
-    <!-- Input box to display formatted tags -->
-    <input
-        type="text"
-        id="formattedTagsOutput"
-        placeholder="Formatted tags will appear here"
-        readonly
-    />
+        <!-- Input box to display formatted tags -->
+        <input
+            type="text"
+            id="formattedTagsOutput"
+            placeholder="Formatted tags will appear here"
+            readonly
+        />
 
-    <!-- Button to copy formatted tags -->
-    <button onclick="copyFormattedTags()">Copy Formatted Tags</button>
+        <!-- Button to copy formatted tags -->
+        <button onclick="copyFormattedTags()">Copy Formatted Tags</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
