@@ -1,0 +1,29 @@
+body {
+				font-family: Arial, sans-serif;
+				margin: 40px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+			textarea,
+			input[type='text'] {
+				width: 100%;
+				max-width: 600px;
+				padding: 10px;
+				margin: 10px 0;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+			button {
+				padding: 10px 20px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				margin: 5px;
+			}
+			button:hover {
+				background-color: #45a049;
+			}

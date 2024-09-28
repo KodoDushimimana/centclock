@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Bullet List to Comma-Separated Tags</title>
+	</head>
+	<body>
+		<h2>Convert Bullet List to Comma-Separated Tags</h2>
+		<h2>
+			Paste a list of items, and the system will convert them into tags that you
+			can easily paste into YouTube's tags field.
+		</h2>
+
+		<!-- Textarea to input bullet list -->
+		<textarea
+			id="bulletList"
+			rows="10"
+			placeholder="Paste your bullet list here (one item per line)"
+		></textarea>
+
+		<!-- Button to trigger conversion -->
+		<button onclick="convertToTags()">Convert to Tags</button>
+
+		<!-- Input box to display comma-separated tags -->
+		<input
+			type="text"
+			id="tagsOutput"
+			placeholder="Comma-separated tags will appear here"
+			readonly
+		/>
+
+		<!-- Button to copy the tags -->
+		<button onclick="copyTags()">Copy Tags</button>
+
+		<script src="script.js"></script>
+	</body>
+</html>
