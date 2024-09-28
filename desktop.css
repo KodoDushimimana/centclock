@@ -1,16 +1,52 @@
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light background color */
     position: relative;
     overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
+/* Menu Bar styles */
+nav {
+    background-color: #4a90e2; /* Blue background */
+    padding: 15px; /* Add padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Full width */
+    position: absolute; /* Position at the top */
+    top: 0; /* Stick to the top */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the menu */
+}
+
+nav li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+/* Background text styles */
 .background-text {
     position: absolute;
     top: 0;
@@ -31,10 +67,12 @@ body {
     );
 }
 
+/* Clock container styles */
 .clock-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 100px; /* Add some space below the menu */
 }
 
 .clock {
