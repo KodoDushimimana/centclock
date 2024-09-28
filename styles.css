@@ -1,12 +1,13 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
+    margin: 0; /* Reset margin for the body */
+    padding: 0; /* Reset padding for the body */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the start */
     flex-direction: column;
-    position: relative; /* To position the menu bar */
+    min-height: 100vh; /* Ensure full height of the viewport */
 }
 
 /* Menu Bar styles */
@@ -15,7 +16,7 @@ nav {
     padding: 15px; /* Add padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     width: 100%; /* Full width */
-    position: absolute; /* Position at the top */
+    position: fixed; /* Fix position at the top */
     top: 0; /* Stick to the top */
     z-index: 1; /* Ensure it appears above other content */
 }
@@ -43,6 +44,17 @@ nav a:hover {
     color: #ffcc00; /* Gold color on hover */
 }
 
+/* Content styles */
+h2 {
+    margin-top: 70px; /* Space below the fixed nav */
+    text-align: center; /* Center align heading */
+}
+
+p {
+    text-align: center; /* Center align paragraph */
+    max-width: 600px; /* Limit width */
+}
+
 /* Textarea and Input styles */
 textarea,
 input[type='text'] {
@@ -52,6 +64,7 @@ input[type='text'] {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
 }
 
 /* Button styles */
@@ -64,8 +77,25 @@ button {
     cursor: pointer; /* Pointer on hover */
     margin: 5px; /* Space around buttons */
     transition: background-color 0.3s; /* Smooth transition */
+    width: 100%; /* Full width */
+    max-width: 200px; /* Max width for buttons */
 }
 
 button:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    nav li {
+        margin: 10px 0; /* Space between stacked menu items */
+    }
+
+    button {
+        max-width: 100%; /* Allow buttons to take full width */
+    }
 }
