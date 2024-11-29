@@ -38,11 +38,11 @@ function updateTime() {
 	}
 }
 
-function displayMessage() {
-	const messageDiv = document.getElementById('message');
-	messageDiv.innerHTML =
-		'Time to go green... <a href="https://centennialgen.com" target="_blank">Talk to Centennial</a>';
-}
+//function displayMessage() {
+	//const messageDiv = document.getElementById('message');
+	//messageDiv.innerHTML =
+		//'Time to go green... <a href="https://centennialgen.com" target="_blank">Talk to Centennial</a>';
+//}
 
 // Update time every second
 setInterval(updateTime, 1000);
