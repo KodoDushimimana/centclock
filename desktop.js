@@ -22,13 +22,13 @@ function updateTime() {
 		let statusClass = '';
 
 		if (hours >= 0 && hours < 8) {
-			statusText = 'Evening';
+			statusText = 'Out of Work';
 			statusClass = 'Relax';
 		} else if (hours >= 8 && hours < 18) {
 			statusText = 'Work Time';
 			statusClass = 'at-work';
 		} else {
-			statusText = 'Centennial Office is closed';
+			statusText = 'Out of Work';
 			statusClass = 'closed';
 		}
 
