@@ -52,4 +52,4 @@ setInterval(displayMessage, 60000);
 
 // Initial call to display time and message immediately
 updateTime();
-displayMessage();
+//displayMessage();
